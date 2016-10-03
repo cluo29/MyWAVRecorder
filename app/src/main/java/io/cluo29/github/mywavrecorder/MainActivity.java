@@ -2,6 +2,7 @@ package io.cluo29.github.mywavrecorder;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 extAudioRecorder.setOutputFile(getApplicationContext().getExternalFilesDir(null)+ fileName);
                 extAudioRecorder.prepare();
                 extAudioRecorder.start();
+                Log.d("WAV","123");
             }
         });
 
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 extAudioRecorder.stop();
                 extAudioRecorder.release();
+                Log.d("WAV","321");
             }
         });
     }
